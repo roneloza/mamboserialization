@@ -1,0 +1,6 @@
+framework module MamboSerialization {
+  umbrella header "MamboSerialization.h"
+
+  export *
+  module * { export * }
+}

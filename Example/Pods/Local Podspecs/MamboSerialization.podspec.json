@@ -1,0 +1,37 @@
+{
+  "name": "MamboSerialization",
+  "version": "0.1.0",
+  "summary": "MamboSerialization bring serialization, and base model class for your app.",
+  "description": "The MamboSerialization framework provides a base layer of functionality for apps and frameworks, including serialization, and model classes runtime inspectable. The classes, protocols defined by TSSFoundation can be used throughout the iOS SDKs.",
+  "homepage": "http://mambo.pe",
+  "license": {
+    "type": "MIT",
+    "text": "Copyright 2017 Mambo"
+  },
+  "authors": {
+    "Rone Loza": "rone.loza@mambo.pe"
+  },
+  "source": {
+    "git": "https://bitbucket.org/compec/MamboSerialization.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "default_subspecs": [
+    "Core"
+  ],
+  "subspecs": [
+    {
+      "name": "Core",
+      "vendored_frameworks": [
+        "MamboSerialization/Frameworks/MamboSerialization-Release-iphoneuniversal/MamboGoogleDataProvider.framework"
+      ]
+    },
+    {
+      "name": "Static",
+      "source_files": "Framework/MamboSerialization/Classes/**/*.{h,m}",
+      "public_header_files": "Framework/MamboSerialization/Classes/**/*.h"
+    }
+  ]
+}

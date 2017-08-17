@@ -1,14 +1,14 @@
 use_frameworks!
 
 target 'MamboSerialization_Example' do
-  pod 'MamboSerialization', :path => '../'
-
-  target 'MamboSerialization_Tests' do
-    inherit! :search_paths
-
-    pod 'Specta'
-  pod 'Expecta'
-  pod 'FBSnapshotTestCase'
-  pod 'Expecta+Snapshots'
-  end
+    pod 'MamboSerialization', :path => '../'
+    
+    target 'MamboSerialization_Tests' do
+        inherit! :search_paths
+        
+        pod 'Specta'
+        pod 'Expecta'
+        pod 'FBSnapshotTestCase'
+        pod 'Expecta+Snapshots'
+    end
 end
