@@ -6,15 +6,15 @@
 	<dict>
 		<key>Headers/MBOInspectableModel.h</key>
 		<data>
-		2MAC649tt/Yx/sBSdBD3pyP1Cjs=
+		aFUIz6CJ+MisTdfIhM4AYYKcu0E=
 		</data>
 		<key>Headers/MBOInspectableObject.h</key>
 		<data>
-		0O9S712ZTZnd2CP/B5jcokF2iPg=
+		EuBuOfwstDoER9/olRahDDG6ckU=
 		</data>
 		<key>Headers/MBOJSONSerializationParse.h</key>
 		<data>
-		hnVK94VJtGEM7DAqg6OSPbakC3c=
+		smMx2SxxIGeN+F/C9HgE2EKiABg=
 		</data>
 		<key>Headers/MamboSerialization.h</key>
 		<data>
@@ -35,33 +35,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2MAC649tt/Yx/sBSdBD3pyP1Cjs=
+			aFUIz6CJ+MisTdfIhM4AYYKcu0E=
 			</data>
 			<key>hash2</key>
 			<data>
-			nJSX4osl3e1QR0b1nTpM4BKHLP+w7v5/GaRS7ojS6Bo=
+			7z1c0lAo5n4QHDiNQ1Ezp9RGuDGWorhp0N5eYDlA7oo=
 			</data>
 		</dict>
 		<key>Headers/MBOInspectableObject.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0O9S712ZTZnd2CP/B5jcokF2iPg=
+			EuBuOfwstDoER9/olRahDDG6ckU=
 			</data>
 			<key>hash2</key>
 			<data>
-			kJizGIQ2ApUmCHVF17RDylQQTnAHnjxG75ZV9agaq90=
+			OtyH1c9tLgRLHOu+rOSVVlZzb0l6HGvlaUk/+OW7bdE=
 			</data>
 		</dict>
 		<key>Headers/MBOJSONSerializationParse.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hnVK94VJtGEM7DAqg6OSPbakC3c=
+			smMx2SxxIGeN+F/C9HgE2EKiABg=
 			</data>
 			<key>hash2</key>
 			<data>
-			XHT+MHr0ArXqd+5bT5Wimq+qz/cM4g597vVqvBlVaTQ=
+			PKESm7x2txbbH3FndEPyxhu7mrczdxLnh5MCK7F3p0A=
 			</data>
 		</dict>
 		<key>Headers/MamboSerialization.h</key>

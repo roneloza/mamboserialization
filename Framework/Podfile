@@ -1,6 +1,9 @@
+source 'https://bitbucket.org/compec/mambospecs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '8.0'
+
+use_frameworks!
 
 target 'MamboSerialization' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks

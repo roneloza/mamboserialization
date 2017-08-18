@@ -27,7 +27,7 @@
 		0C144E691F44F41D009B03A5 /* MBOInspectableObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C144E631F44F41D009B03A5 /* MBOInspectableObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C144E6A1F44F41D009B03A5 /* MBOJSONSerializationParse.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C144E651F44F41D009B03A5 /* MBOJSONSerializationParse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C144E6B1F44F41D009B03A5 /* MBOJSONSerializationParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C144E661F44F41D009B03A5 /* MBOJSONSerializationParse.m */; };
-		DC6621D01F75F13571219F64 /* libPods-MamboSerialization.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E12A6E9457680CE77CCEB91D /* libPods-MamboSerialization.a */; };
+		ED957EEB4C38D2F42BB4E419 /* Pods_MamboSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4466B693F17123E3035F63D /* Pods_MamboSerialization.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +41,8 @@
 		0C144E651F44F41D009B03A5 /* MBOJSONSerializationParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBOJSONSerializationParse.h; sourceTree = "<group>"; };
 		0C144E661F44F41D009B03A5 /* MBOJSONSerializationParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBOJSONSerializationParse.m; sourceTree = "<group>"; };
 		2D3E4DD6BD79D519D15F0724 /* Pods-MamboSerialization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamboSerialization.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MamboSerialization/Pods-MamboSerialization.debug.xcconfig"; sourceTree = "<group>"; };
+		A4466B693F17123E3035F63D /* Pods_MamboSerialization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MamboSerialization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE962E2185F394C5F273CBC /* Pods-MamboSerialization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamboSerialization.release.xcconfig"; path = "Pods/Target Support Files/Pods-MamboSerialization/Pods-MamboSerialization.release.xcconfig"; sourceTree = "<group>"; };
-		E12A6E9457680CE77CCEB91D /* libPods-MamboSerialization.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MamboSerialization.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC6621D01F75F13571219F64 /* libPods-MamboSerialization.a in Frameworks */,
+				ED957EEB4C38D2F42BB4E419 /* Pods_MamboSerialization.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +125,7 @@
 		637CF3A852E2FEFF5554305B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E12A6E9457680CE77CCEB91D /* libPods-MamboSerialization.a */,
+				A4466B693F17123E3035F63D /* Pods_MamboSerialization.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

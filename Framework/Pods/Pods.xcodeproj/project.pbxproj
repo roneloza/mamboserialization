@@ -7,70 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		292CCB8113238D56D928435FDA58FDB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		CA0CAAED7A16C6780B69DE8027C8341F /* Pods-MamboSerialization-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F086F1AACE1875A009C36D4742E1F809 /* Pods-MamboSerialization-dummy.m */; };
+		72D5A3666EB4FBAAA1CFF06E2E7D94CE /* Pods-MamboSerialization-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 275CA68FD21C7728E744384EA4308463 /* Pods-MamboSerialization-dummy.m */; };
+		877551287F0C2D45C29EE28D19D0D1A2 /* Pods-MamboSerialization-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE71C858DC34480E4F9195D38D9D0E28 /* Pods-MamboSerialization-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B82DDE63E4E5E5A17D0F38E9BB9B14A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1808CF5771700EAE860419F87D2C15CF /* Pods-MamboSerialization-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MamboSerialization-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1AE7D4F446F850895CBAB066782E0A2D /* libPods-MamboSerialization.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MamboSerialization.a"; path = "libPods-MamboSerialization.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		019470ED218B3DAE7ED8645C2254A7F7 /* Pods-MamboSerialization-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MamboSerialization-acknowledgements.plist"; sourceTree = "<group>"; };
+		275CA68FD21C7728E744384EA4308463 /* Pods-MamboSerialization-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MamboSerialization-dummy.m"; sourceTree = "<group>"; };
+		3D9CD1E301BF09CE55A6B55A5FDB8015 /* Pods-MamboSerialization.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MamboSerialization.modulemap"; sourceTree = "<group>"; };
+		551DDE206953C4FDED6DA49657CA9539 /* Pods-MamboSerialization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MamboSerialization.release.xcconfig"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D18F69FB5CAEA10E3545D654A60A3B8D /* Pods-MamboSerialization-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MamboSerialization-acknowledgements.plist"; sourceTree = "<group>"; };
-		D88A2D27D864AD927EE26BA34489698B /* Pods-MamboSerialization-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MamboSerialization-resources.sh"; sourceTree = "<group>"; };
-		D9464E6089A7112179A2688EECEEA8CF /* Pods-MamboSerialization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MamboSerialization.release.xcconfig"; sourceTree = "<group>"; };
-		DEA6314C5EA345B12447F086AF4A3F0C /* Pods-MamboSerialization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MamboSerialization.debug.xcconfig"; sourceTree = "<group>"; };
-		F086F1AACE1875A009C36D4742E1F809 /* Pods-MamboSerialization-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MamboSerialization-dummy.m"; sourceTree = "<group>"; };
+		9F92AB11E4FBE541F9B1B5BA194A9013 /* Pods-MamboSerialization-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MamboSerialization-resources.sh"; sourceTree = "<group>"; };
+		A6BE8A168B89E78E2A8A5697FFCC09ED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE71C858DC34480E4F9195D38D9D0E28 /* Pods-MamboSerialization-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MamboSerialization-umbrella.h"; sourceTree = "<group>"; };
+		B900BD7E77327C6EBB82C9973C88551D /* Pods-MamboSerialization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MamboSerialization.debug.xcconfig"; sourceTree = "<group>"; };
+		C16E3BBE185FAFB1C802F12E3D5D2EB6 /* Pods_MamboSerialization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MamboSerialization.framework; path = "Pods-MamboSerialization.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEC3C7D670792FA25989C62492F1F11F /* Pods-MamboSerialization-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MamboSerialization-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AE6FA1F23731A07ABB0B15AFB4BDD225 /* Frameworks */ = {
+		CBBA42F2E6D798845FBE7D320EB0E59D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				292CCB8113238D56D928435FDA58FDB9 /* Foundation.framework in Frameworks */,
+				8B82DDE63E4E5E5A17D0F38E9BB9B14A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4FF756299A94A9FCA280FF2AAF8B417C /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				62903F44FDB243A287E2D03447B3552A /* Pods-MamboSerialization */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		62903F44FDB243A287E2D03447B3552A /* Pods-MamboSerialization */ = {
-			isa = PBXGroup;
-			children = (
-				1808CF5771700EAE860419F87D2C15CF /* Pods-MamboSerialization-acknowledgements.markdown */,
-				D18F69FB5CAEA10E3545D654A60A3B8D /* Pods-MamboSerialization-acknowledgements.plist */,
-				F086F1AACE1875A009C36D4742E1F809 /* Pods-MamboSerialization-dummy.m */,
-				D88A2D27D864AD927EE26BA34489698B /* Pods-MamboSerialization-resources.sh */,
-				DEA6314C5EA345B12447F086AF4A3F0C /* Pods-MamboSerialization.debug.xcconfig */,
-				D9464E6089A7112179A2688EECEEA8CF /* Pods-MamboSerialization.release.xcconfig */,
-			);
-			name = "Pods-MamboSerialization";
-			path = "Target Support Files/Pods-MamboSerialization";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				B043EEB83E40291A6BE343EE2DB929EC /* Products */,
-				4FF756299A94A9FCA280FF2AAF8B417C /* Targets Support Files */,
+				9DC75C6DEBC72C75EB81D861ECF81263 /* Products */,
+				81DC9DB8883B119AFAF1068AD71A9F80 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		B043EEB83E40291A6BE343EE2DB929EC /* Products */ = {
+		81DC9DB8883B119AFAF1068AD71A9F80 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1AE7D4F446F850895CBAB066782E0A2D /* libPods-MamboSerialization.a */,
+				F28F4E505DC51D8BAEFDD8CAF0F3C753 /* Pods-MamboSerialization */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9DC75C6DEBC72C75EB81D861ECF81263 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C16E3BBE185FAFB1C802F12E3D5D2EB6 /* Pods_MamboSerialization.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,15 +81,44 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		F28F4E505DC51D8BAEFDD8CAF0F3C753 /* Pods-MamboSerialization */ = {
+			isa = PBXGroup;
+			children = (
+				A6BE8A168B89E78E2A8A5697FFCC09ED /* Info.plist */,
+				3D9CD1E301BF09CE55A6B55A5FDB8015 /* Pods-MamboSerialization.modulemap */,
+				DEC3C7D670792FA25989C62492F1F11F /* Pods-MamboSerialization-acknowledgements.markdown */,
+				019470ED218B3DAE7ED8645C2254A7F7 /* Pods-MamboSerialization-acknowledgements.plist */,
+				275CA68FD21C7728E744384EA4308463 /* Pods-MamboSerialization-dummy.m */,
+				9F92AB11E4FBE541F9B1B5BA194A9013 /* Pods-MamboSerialization-resources.sh */,
+				AE71C858DC34480E4F9195D38D9D0E28 /* Pods-MamboSerialization-umbrella.h */,
+				B900BD7E77327C6EBB82C9973C88551D /* Pods-MamboSerialization.debug.xcconfig */,
+				551DDE206953C4FDED6DA49657CA9539 /* Pods-MamboSerialization.release.xcconfig */,
+			);
+			name = "Pods-MamboSerialization";
+			path = "Target Support Files/Pods-MamboSerialization";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		038175C0262CD597D7DE3E46E8060F01 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877551287F0C2D45C29EE28D19D0D1A2 /* Pods-MamboSerialization-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		099B2F9FF39E3219AE6DF5242851B55F /* Pods-MamboSerialization */ = {
+		039E0F436D7E39075DBC30E2419BBCFC /* Pods-MamboSerialization */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5CC89C61BBFA5F3BDA42AFA990726282 /* Build configuration list for PBXNativeTarget "Pods-MamboSerialization" */;
+			buildConfigurationList = 1A7DE8D5D7ADF55A9C938133E177D982 /* Build configuration list for PBXNativeTarget "Pods-MamboSerialization" */;
 			buildPhases = (
-				21282B81E148DBAA4BD543BE7D2BC044 /* Sources */,
-				AE6FA1F23731A07ABB0B15AFB4BDD225 /* Frameworks */,
+				8996B45170D64E0578FDFA7607EEFD9E /* Sources */,
+				CBBA42F2E6D798845FBE7D320EB0E59D /* Frameworks */,
+				038175C0262CD597D7DE3E46E8060F01 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -107,8 +126,8 @@
 			);
 			name = "Pods-MamboSerialization";
 			productName = "Pods-MamboSerialization";
-			productReference = 1AE7D4F446F850895CBAB066782E0A2D /* libPods-MamboSerialization.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = C16E3BBE185FAFB1C802F12E3D5D2EB6 /* Pods_MamboSerialization.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -127,21 +146,21 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = B043EEB83E40291A6BE343EE2DB929EC /* Products */;
+			productRefGroup = 9DC75C6DEBC72C75EB81D861ECF81263 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				099B2F9FF39E3219AE6DF5242851B55F /* Pods-MamboSerialization */,
+				039E0F436D7E39075DBC30E2419BBCFC /* Pods-MamboSerialization */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		21282B81E148DBAA4BD543BE7D2BC044 /* Sources */ = {
+		8996B45170D64E0578FDFA7607EEFD9E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA0CAAED7A16C6780B69DE8027C8341F /* Pods-MamboSerialization-dummy.m in Sources */,
+				72D5A3666EB4FBAAA1CFF06E2E7D94CE /* Pods-MamboSerialization-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,49 +211,39 @@
 			};
 			name = Release;
 		};
-		378F78FF4D6E1BFF4C60145F396B7268 /* Debug */ = {
+		540AE54A0F6145F4100E36D0436F6C35 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DEA6314C5EA345B12447F086AF4A3F0C /* Pods-MamboSerialization.debug.xcconfig */;
+			baseConfigurationReference = 551DDE206953C4FDED6DA49657CA9539 /* Pods-MamboSerialization.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		81E4512B6536D6FB4EA301A87D5B49AC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9464E6089A7112179A2688EECEEA8CF /* Pods-MamboSerialization.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MamboSerialization/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MamboSerialization/Pods-MamboSerialization.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_MamboSerialization;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -286,23 +295,59 @@
 			};
 			name = Debug;
 		};
+		F7A08CAEC827245A036E3723EE5000F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B900BD7E77327C6EBB82C9973C88551D /* Pods-MamboSerialization.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MamboSerialization/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MamboSerialization/Pods-MamboSerialization.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MamboSerialization;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1A7DE8D5D7ADF55A9C938133E177D982 /* Build configuration list for PBXNativeTarget "Pods-MamboSerialization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7A08CAEC827245A036E3723EE5000F4 /* Debug */,
+				540AE54A0F6145F4100E36D0436F6C35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C104F7F091290C3D1E248192F07FE689 /* Debug */,
 				34FE9531DA9AF2820790339988D5FF41 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5CC89C61BBFA5F3BDA42AFA990726282 /* Build configuration list for PBXNativeTarget "Pods-MamboSerialization" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				378F78FF4D6E1BFF4C60145F396B7268 /* Debug */,
-				81E4512B6536D6FB4EA301A87D5B49AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'MamboSerialization'
-    s.version          = '0.1.0'
+    s.version          = '0.1.2'
     s.summary          = "MamboSerialization bring serialization, and base model class for your app."
     s.description      = "The MamboSerialization framework provides a base layer of functionality for serialization, and model classes are runtime inspectable for properties. The classes, protocols defined by MamboSerialization can be used throughout the iOS SDKs."
     
