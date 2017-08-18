@@ -29,9 +29,9 @@ SPEC CHECKSUMS:
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   Expecta+Snapshots: dcff217eef506dabd6dfdc7864ea2da321fafbb8
   FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
-  MamboSerialization: 8d179ab14f2138f832bc9860314b60712c5f6df1
+  MamboSerialization: f69fa343de00faca6c34961971863b6e20f482d1
   Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
 
-PODFILE CHECKSUM: 20c4cbdca2aefbe7af5b6dcc9da9b50a89ffad09
+PODFILE CHECKSUM: 647ef4d6f1d564ddb2b8f92be0bc45b7b35368c0
 
 COCOAPODS: 1.2.1

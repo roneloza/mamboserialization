@@ -2,7 +2,7 @@
   "name": "MamboSerialization",
   "version": "0.1.0",
   "summary": "MamboSerialization bring serialization, and base model class for your app.",
-  "description": "The MamboSerialization framework provides a base layer of functionality for apps and frameworks, including serialization, and model classes runtime inspectable. The classes, protocols defined by TSSFoundation can be used throughout the iOS SDKs.",
+  "description": "The MamboSerialization framework provides a base layer of functionality for serialization, and model classes are runtime inspectable for properties. The classes, protocols defined by MamboSerialization can be used throughout the iOS SDKs.",
   "homepage": "http://mambo.pe",
   "license": {
     "type": "MIT",
@@ -25,7 +25,7 @@
     {
       "name": "Core",
       "vendored_frameworks": [
-        "MamboSerialization/Frameworks/MamboSerialization-Release-iphoneuniversal/MamboGoogleDataProvider.framework"
+        "MamboSerialization/Frameworks/MamboSerialization-Release-iphoneuniversal/MamboSerialization.framework"
       ]
     },
     {

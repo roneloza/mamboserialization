@@ -9,8 +9,7 @@
 #import "MBOViewController.h"
 #import "MBOGooglePlaceAutoCompletePrediction.h"
 
-#import <MamboSerialization/MBOInspectableModel.h>
-#import <MamboSerialization/MBOJSONSerializationParse.h>
+@import MamboSerialization;
 
 @interface MBOViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

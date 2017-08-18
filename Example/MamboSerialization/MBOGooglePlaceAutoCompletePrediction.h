@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <MamboSerialization/MBOInspectableModel.h>
+@import MamboSerialization;
 
 @protocol MBOGooglePlaceAutoCompleteTerms;
 @protocol MBOGooglePlaceAutoCompleteMatchedSubstrings;

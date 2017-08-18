@@ -212,6 +212,7 @@
 		07BC24DA84E3F15453DEC37314546A77 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A5F6EC9C4C2795348152BA100C32B10 /* SPTSharedExampleGroups.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTSharedExampleGroups.h; path = Specta/Specta/SPTSharedExampleGroups.h; sourceTree = "<group>"; };
 		0C75DFE8C463E28459A9A9DD7E921822 /* SPTExample.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTExample.m; path = Specta/Specta/SPTExample.m; sourceTree = "<group>"; };
+		0EEFCDC908AD41FDB9799F33A6BDF21A /* MamboSerialization.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MamboSerialization.framework; path = "MamboSerialization/Frameworks/MamboSerialization-Release-iphoneuniversal/MamboSerialization.framework"; sourceTree = "<group>"; };
 		129B1E2892E8FC85FB05E35FE58632DB /* Pods-MamboSerialization_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MamboSerialization_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		1555731AE1DED9FA346A12AA3579F475 /* Pods-MamboSerialization_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MamboSerialization_Example-resources.sh"; sourceTree = "<group>"; };
 		158CEFBA77071AB835E435120F4CE616 /* EXPMatchers+respondTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+respondTo.h"; path = "Expecta/Matchers/EXPMatchers+respondTo.h"; sourceTree = "<group>"; };
@@ -479,14 +480,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1EA6180C610F878FF5B6283E8AD8EC1B /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CD0800CBCF24A1436E3F3D7C9D899EDD /* MamboSerialization */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		237CE44B01A3CE05485F553E8BF45E8C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -544,6 +537,14 @@
 			path = "Target Support Files/Pods-MamboSerialization_Example";
 			sourceTree = "<group>";
 		};
+		40BE97B42EAE4E21D3D2AC890ED52DE5 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8ECD569F96E430B13E1401FE73E72082 /* MamboSerialization */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		4CA18F3DC30581365A54F4457AEB141A /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,6 +552,14 @@
 				F913C2890EA689514180FD2551DA26DD /* Pods-MamboSerialization_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		66E3F3FEEC74F8829A0157C4CC347668 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B6BC96E5D28057FC38F7E362BB803A10 /* Frameworks */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 		778606D5FF2F934B11EBF31C35276646 /* FBSnapshotTestCase */ = {
@@ -650,12 +659,21 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				1EA6180C610F878FF5B6283E8AD8EC1B /* Development Pods */,
+				40BE97B42EAE4E21D3D2AC890ED52DE5 /* Development Pods */,
 				1922ED2492F2CD5F07BAE0E198724705 /* Frameworks */,
 				08D965B0F9B0084EEFBE7A581FFDD562 /* Pods */,
 				0AEBC98E57C29AEF2B924549206F26A1 /* Products */,
 				4CA18F3DC30581365A54F4457AEB141A /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8ECD569F96E430B13E1401FE73E72082 /* MamboSerialization */ = {
+			isa = PBXGroup;
+			children = (
+				66E3F3FEEC74F8829A0157C4CC347668 /* Core */,
+			);
+			name = MamboSerialization;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		A5146D344D0BDF4F9705D174EE7D3186 /* SwiftSupport */ = {
@@ -664,6 +682,14 @@
 				D15181A2A90AA8A9F24D97664729A1B2 /* SwiftSupport.swift */,
 			);
 			name = SwiftSupport;
+			sourceTree = "<group>";
+		};
+		B6BC96E5D28057FC38F7E362BB803A10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EEFCDC908AD41FDB9799F33A6BDF21A /* MamboSerialization.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C29C93E7F175EC9CDE6E55BE676C8B75 /* Specta */ = {
@@ -698,14 +724,6 @@
 			);
 			name = Specta;
 			path = Specta;
-			sourceTree = "<group>";
-		};
-		CD0800CBCF24A1436E3F3D7C9D899EDD /* MamboSerialization */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = MamboSerialization;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		D444F89BC8BA24BC0761D553BC8F0231 /* Expecta+Snapshots */ = {
