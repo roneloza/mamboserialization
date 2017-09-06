@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'MamboSerialization'
-    s.version          = '0.1.2'
+    s.version          = '0.1.3'
     s.summary          = "MamboSerialization bring serialization, and base model class for your app."
     s.description      = "The MamboSerialization framework provides a base layer of functionality for serialization, and model classes are runtime inspectable for properties. The classes, protocols defined by MamboSerialization can be used throughout the iOS SDKs."
     
@@ -31,6 +31,7 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'Static' do |ss|
+
         ss.source_files = 'Framework/MamboSerialization/Classes/**/*.{h,m}'
         ss.public_header_files = 'Framework/MamboSerialization/Classes/**/*.h'
     end

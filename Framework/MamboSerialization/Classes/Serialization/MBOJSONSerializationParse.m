@@ -159,7 +159,7 @@
 
 + (id)parseDictionary:(NSDictionary *)dictionary toObjectClass:(Class)objectClass; {
     
-    MBOInspectableModel *object = nil;
+    id object = nil;
     
     if (dictionary) {
         
@@ -200,6 +200,10 @@
                     }
                 }
             }
+        }
+        else {
+            
+            object = dictionary;
         }
     }
     
