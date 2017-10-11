@@ -187,7 +187,10 @@
     
     if (setterName == NULL) {
         
-        setter = NSSelectorFromString(propertyName);
+        NSString *setterSelectorName = [NSString stringWithFormat:@"set%@%@:",
+                                [[propertyName substringToIndex:1] uppercaseString],[propertyName substringFromIndex:1]];
+        
+        setter = NSSelectorFromString(setterSelectorName);
     }
     else {
         
