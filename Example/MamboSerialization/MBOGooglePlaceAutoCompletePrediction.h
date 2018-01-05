@@ -35,6 +35,7 @@
 
 @interface MBOGooglePlaceAutoCompletePrediction : MBOInspectableModel
 
+@property (nonatomic, strong, readonly) NSString *aaaaaaaaaaaaa;
 @property (nonatomic, strong, readonly) NSString *desc;
 @property (nonatomic, strong, readonly) NSString *uuid;
 @property (nonatomic, strong, readonly) NSArray<MBOGooglePlaceAutoCompleteMatchedSubstrings> *matchedSubstrings;

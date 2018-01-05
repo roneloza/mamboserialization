@@ -27,8 +27,27 @@
 		0C144E691F44F41D009B03A5 /* MBOInspectableObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C144E631F44F41D009B03A5 /* MBOInspectableObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C144E6A1F44F41D009B03A5 /* MBOJSONSerializationParse.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C144E651F44F41D009B03A5 /* MBOJSONSerializationParse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C144E6B1F44F41D009B03A5 /* MBOJSONSerializationParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C144E661F44F41D009B03A5 /* MBOJSONSerializationParse.m */; };
+		0CF9D7DF1FFEDE8D00DF6F8E /* MamboSerializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9D7DE1FFEDE8D00DF6F8E /* MamboSerializationTests.m */; };
+		0CF9D7E11FFEDE8D00DF6F8E /* MamboSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C144E401F44E32D009B03A5 /* MamboSerialization.framework */; };
+		0CF9D7EB1FFEE9D900DF6F8E /* quizDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CF9D7E81FFEE9D900DF6F8E /* quizDetail.json */; };
+		0CF9D7EC1FFEE9D900DF6F8E /* quizActive.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CF9D7E91FFEE9D900DF6F8E /* quizActive.json */; };
+		0CF9D7ED1FFEE9D900DF6F8E /* quizzes.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CF9D7EA1FFEE9D900DF6F8E /* quizzes.json */; };
+		0CF9D7F01FFEE9FC00DF6F8E /* SAOMeQuiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9D7EE1FFEE9FB00DF6F8E /* SAOMeQuiz.m */; };
+		0CF9D7F51FFF004700DF6F8E /* SAOMeQuizQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9D7F31FFF004700DF6F8E /* SAOMeQuizQuestion.m */; };
+		0CF9D7F61FFF004700DF6F8E /* SAOMeQuizAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9D7F41FFF004700DF6F8E /* SAOMeQuizAnswer.m */; };
+		D90F83E86436E03DB0A95CE1 /* Pods_MamboSerializationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C7928DB2081A81A17ED8B09 /* Pods_MamboSerializationTests.framework */; };
 		ED957EEB4C38D2F42BB4E419 /* Pods_MamboSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4466B693F17123E3035F63D /* Pods_MamboSerialization.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0CF9D7E21FFEDE8D00DF6F8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C144E371F44E32D009B03A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C144E3F1F44E32D009B03A5;
+			remoteInfo = MamboSerialization;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0C144E401F44E32D009B03A5 /* MamboSerialization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MamboSerialization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,9 +59,24 @@
 		0C144E631F44F41D009B03A5 /* MBOInspectableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBOInspectableObject.h; sourceTree = "<group>"; };
 		0C144E651F44F41D009B03A5 /* MBOJSONSerializationParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBOJSONSerializationParse.h; sourceTree = "<group>"; };
 		0C144E661F44F41D009B03A5 /* MBOJSONSerializationParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBOJSONSerializationParse.m; sourceTree = "<group>"; };
+		0CF9D7DC1FFEDE8D00DF6F8E /* MamboSerializationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MamboSerializationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CF9D7DE1FFEDE8D00DF6F8E /* MamboSerializationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MamboSerializationTests.m; sourceTree = "<group>"; };
+		0CF9D7E01FFEDE8D00DF6F8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CF9D7E81FFEE9D900DF6F8E /* quizDetail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = quizDetail.json; sourceTree = "<group>"; };
+		0CF9D7E91FFEE9D900DF6F8E /* quizActive.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = quizActive.json; sourceTree = "<group>"; };
+		0CF9D7EA1FFEE9D900DF6F8E /* quizzes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = quizzes.json; sourceTree = "<group>"; };
+		0CF9D7EE1FFEE9FB00DF6F8E /* SAOMeQuiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAOMeQuiz.m; sourceTree = "<group>"; };
+		0CF9D7EF1FFEE9FC00DF6F8E /* SAOMeQuiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAOMeQuiz.h; sourceTree = "<group>"; };
+		0CF9D7F11FFF004600DF6F8E /* SAOMeQuizQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAOMeQuizQuestion.h; sourceTree = "<group>"; };
+		0CF9D7F21FFF004600DF6F8E /* SAOMeQuizAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAOMeQuizAnswer.h; sourceTree = "<group>"; };
+		0CF9D7F31FFF004700DF6F8E /* SAOMeQuizQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAOMeQuizQuestion.m; sourceTree = "<group>"; };
+		0CF9D7F41FFF004700DF6F8E /* SAOMeQuizAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAOMeQuizAnswer.m; sourceTree = "<group>"; };
 		2D3E4DD6BD79D519D15F0724 /* Pods-MamboSerialization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamboSerialization.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MamboSerialization/Pods-MamboSerialization.debug.xcconfig"; sourceTree = "<group>"; };
+		6A127359DF3EF76655EBC0D6 /* Pods-MamboSerializationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamboSerializationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MamboSerializationTests/Pods-MamboSerializationTests.release.xcconfig"; sourceTree = "<group>"; };
+		9C7928DB2081A81A17ED8B09 /* Pods_MamboSerializationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MamboSerializationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4466B693F17123E3035F63D /* Pods_MamboSerialization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MamboSerialization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE962E2185F394C5F273CBC /* Pods-MamboSerialization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamboSerialization.release.xcconfig"; path = "Pods/Target Support Files/Pods-MamboSerialization/Pods-MamboSerialization.release.xcconfig"; sourceTree = "<group>"; };
+		D8EB2AB5E076730578C52A33 /* Pods-MamboSerializationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamboSerializationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MamboSerializationTests/Pods-MamboSerializationTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +88,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0CF9D7D91FFEDE8D00DF6F8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CF9D7E11FFEDE8D00DF6F8E /* MamboSerialization.framework in Frameworks */,
+				D90F83E86436E03DB0A95CE1 /* Pods_MamboSerializationTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -62,6 +105,7 @@
 			children = (
 				0C144E571F44E5EE009B03A5 /* Scripts */,
 				0C144E421F44E32D009B03A5 /* MamboSerialization */,
+				0CF9D7DD1FFEDE8D00DF6F8E /* MamboSerializationTests */,
 				0C144E411F44E32D009B03A5 /* Products */,
 				F570D1BE854AC8169415531E /* Pods */,
 				637CF3A852E2FEFF5554305B /* Frameworks */,
@@ -72,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				0C144E401F44E32D009B03A5 /* MamboSerialization.framework */,
+				0CF9D7DC1FFEDE8D00DF6F8E /* MamboSerializationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,10 +167,37 @@
 			path = Serialization;
 			sourceTree = "<group>";
 		};
+		0CF9D7DD1FFEDE8D00DF6F8E /* MamboSerializationTests */ = {
+			isa = PBXGroup;
+			children = (
+				0CF9D7EF1FFEE9FC00DF6F8E /* SAOMeQuiz.h */,
+				0CF9D7EE1FFEE9FB00DF6F8E /* SAOMeQuiz.m */,
+				0CF9D7F21FFF004600DF6F8E /* SAOMeQuizAnswer.h */,
+				0CF9D7F41FFF004700DF6F8E /* SAOMeQuizAnswer.m */,
+				0CF9D7F11FFF004600DF6F8E /* SAOMeQuizQuestion.h */,
+				0CF9D7F31FFF004700DF6F8E /* SAOMeQuizQuestion.m */,
+				0CF9D7E71FFEE9D900DF6F8E /* Fixture */,
+				0CF9D7DE1FFEDE8D00DF6F8E /* MamboSerializationTests.m */,
+				0CF9D7E01FFEDE8D00DF6F8E /* Info.plist */,
+			);
+			path = MamboSerializationTests;
+			sourceTree = "<group>";
+		};
+		0CF9D7E71FFEE9D900DF6F8E /* Fixture */ = {
+			isa = PBXGroup;
+			children = (
+				0CF9D7E81FFEE9D900DF6F8E /* quizDetail.json */,
+				0CF9D7E91FFEE9D900DF6F8E /* quizActive.json */,
+				0CF9D7EA1FFEE9D900DF6F8E /* quizzes.json */,
+			);
+			path = Fixture;
+			sourceTree = "<group>";
+		};
 		637CF3A852E2FEFF5554305B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				A4466B693F17123E3035F63D /* Pods_MamboSerialization.framework */,
+				9C7928DB2081A81A17ED8B09 /* Pods_MamboSerializationTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -135,6 +207,8 @@
 			children = (
 				2D3E4DD6BD79D519D15F0724 /* Pods-MamboSerialization.debug.xcconfig */,
 				ABE962E2185F394C5F273CBC /* Pods-MamboSerialization.release.xcconfig */,
+				D8EB2AB5E076730578C52A33 /* Pods-MamboSerializationTests.debug.xcconfig */,
+				6A127359DF3EF76655EBC0D6 /* Pods-MamboSerializationTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -176,6 +250,27 @@
 			productReference = 0C144E401F44E32D009B03A5 /* MamboSerialization.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		0CF9D7DB1FFEDE8D00DF6F8E /* MamboSerializationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CF9D7E61FFEDE8D00DF6F8E /* Build configuration list for PBXNativeTarget "MamboSerializationTests" */;
+			buildPhases = (
+				69829302236738B206A90B97 /* [CP] Check Pods Manifest.lock */,
+				0CF9D7D81FFEDE8D00DF6F8E /* Sources */,
+				0CF9D7D91FFEDE8D00DF6F8E /* Frameworks */,
+				0CF9D7DA1FFEDE8D00DF6F8E /* Resources */,
+				176808CDD6C0A952444BFF93 /* [CP] Embed Pods Frameworks */,
+				128563F18C8580ECC747F143 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0CF9D7E31FFEDE8D00DF6F8E /* PBXTargetDependency */,
+			);
+			name = MamboSerializationTests;
+			productName = MamboSerializationTests;
+			productReference = 0CF9D7DC1FFEDE8D00DF6F8E /* MamboSerializationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -195,6 +290,11 @@
 						DevelopmentTeam = 2H7JJNVPU3;
 						ProvisioningStyle = Automatic;
 					};
+					0CF9D7DB1FFEDE8D00DF6F8E = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = RR3DNT46LH;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 0C144E3A1F44E32D009B03A5 /* Build configuration list for PBXProject "MamboSerialization" */;
@@ -211,6 +311,7 @@
 			targets = (
 				0C144E3F1F44E32D009B03A5 /* MamboSerialization */,
 				0C144E5A1F44E7BA009B03A5 /* Universal */,
+				0CF9D7DB1FFEDE8D00DF6F8E /* MamboSerializationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -220,6 +321,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CF9D7DA1FFEDE8D00DF6F8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CF9D7EC1FFEE9D900DF6F8E /* quizActive.json in Resources */,
+				0CF9D7EB1FFEE9D900DF6F8E /* quizDetail.json in Resources */,
+				0CF9D7ED1FFEE9D900DF6F8E /* quizzes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,19 +351,59 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n######################\n# Avoid recursively calling this script.\n######################\nset +u\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\n######################\n# Options\n######################\n\nREVEAL_ARCHIVE_IN_FINDER=false\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} OTHER_CFLAGS=\"-fembed-bitcode\" clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} OTHER_CFLAGS=\"-fembed-bitcode\" clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      if [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\n                                                                      cp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      ######################\n                                                                      # On Release, copy the result to release directory\n                                                                      ######################\n                                                                      #echo \"start output\"\n                                                                      #echo \"output universal\"\n                                                                      #BASE_DIR_OUTPUT=\"${PROJECT_DIR}/Frameworks\"\n                                                                      BASE_DIR_OUTPUT=\"${PROJECT_DIR}/../${FRAMEWORK_NAME}/Frameworks\"\n                                                                      rm -rf \"${BASE_DIR_OUTPUT}\"\n                                                                      \n                                                                      OUTPUT_DIR_UNIVERSAL=\"${BASE_DIR_OUTPUT}/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n                                                                      \n                                                                      rm -rf \"${OUTPUT_DIR_UNIVERSAL}\"\n                                                                      mkdir -p \"${OUTPUT_DIR_UNIVERSAL}\"\n                                                                      \n                                                                      cp -r \"${FRAMEWORK}\" \"${OUTPUT_DIR_UNIVERSAL}\"\n                                                                      #mv \"${OUTPUT_DIR_UNIVERSAL}${FRAMEWORK_NAME}.framework\" \"${OUTPUT_DIR_UNIVERSAL}${FRAMEWORK_NAME}.framework\"\n                                                                      \n                                                                      #echo \"output simulator\"\n                                                                      OUTPUT_DIR_SIMULATOR=\"${BASE_DIR_OUTPUT}/${FRAMEWORK_NAME}-${CONFIGURATION}-iphonesimulator/\"\n                                                                      \n                                                                      rm -rf \"$OUTPUT_DIR_SIMULATOR\"\n                                                                      mkdir -p \"$OUTPUT_DIR_SIMULATOR\"\n                                                                      \n                                                                      cp -r \"${SIMULATOR_LIBRARY_PATH}\" \"${OUTPUT_DIR_SIMULATOR}\"\n                                                                      \n                                                                      #echo \"output iphoneos\"\n                                                                      OUTPUT_DIR_IPHONEOS=\"$BASE_DIR_OUTPUT/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneos/\"\n                                                                      \n                                                                      rm -rf \"${OUTPUT_DIR_IPHONEOS}\"\n                                                                      mkdir -p \"${OUTPUT_DIR_IPHONEOS}\"\n                                                                      \n                                                                      cp -r \"${DEVICE_LIBRARY_PATH}\" \"${OUTPUT_DIR_IPHONEOS}\"\n                                                                      \n                                                                      #echo \"finder\"\n                                                                      if [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\n                                                                      open \"${BASE_DIR_OUTPUT}\"\n                                                                      fi";
 		};
-		5D1E7C3AC11294BD07146389 /* [CP] Check Pods Manifest.lock */ = {
+		128563F18C8580ECC747F143 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MamboSerializationTests/Pods-MamboSerializationTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		176808CDD6C0A952444BFF93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MamboSerializationTests/Pods-MamboSerializationTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Expecta/Expecta.framework",
+				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
+				"${BUILT_PRODUCTS_DIR}/Specta/Specta.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expecta.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMock.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Specta.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MamboSerializationTests/Pods-MamboSerializationTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D1E7C3AC11294BD07146389 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MamboSerialization-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5FAEDA9A535223CE65CF0A88 /* [CP] Copy Pods Resources */ = {
@@ -270,6 +421,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MamboSerialization/Pods-MamboSerialization-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		69829302236738B206A90B97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MamboSerializationTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -282,7 +451,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0CF9D7D81FFEDE8D00DF6F8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CF9D7F01FFEE9FC00DF6F8E /* SAOMeQuiz.m in Sources */,
+				0CF9D7F51FFF004700DF6F8E /* SAOMeQuizQuestion.m in Sources */,
+				0CF9D7F61FFF004700DF6F8E /* SAOMeQuizAnswer.m in Sources */,
+				0CF9D7DF1FFEDE8D00DF6F8E /* MamboSerializationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0CF9D7E31FFEDE8D00DF6F8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C144E3F1F44E32D009B03A5 /* MamboSerialization */;
+			targetProxy = 0CF9D7E21FFEDE8D00DF6F8E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0C144E461F44E32D009B03A5 /* Debug */ = {
@@ -437,6 +625,56 @@
 			};
 			name = Release;
 		};
+		0CF9D7E41FFEDE8D00DF6F8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8EB2AB5E076730578C52A33 /* Pods-MamboSerializationTests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RR3DNT46LH;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = MamboSerializationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.mambo.MamboSerializationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0CF9D7E51FFEDE8D00DF6F8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A127359DF3EF76655EBC0D6 /* Pods-MamboSerializationTests.release.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RR3DNT46LH;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = MamboSerializationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.mambo.MamboSerializationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -463,6 +701,15 @@
 			buildConfigurations = (
 				0C144E5B1F44E7BA009B03A5 /* Debug */,
 				0C144E5C1F44E7BA009B03A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CF9D7E61FFEDE8D00DF6F8E /* Build configuration list for PBXNativeTarget "MamboSerializationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CF9D7E41FFEDE8D00DF6F8E /* Debug */,
+				0CF9D7E51FFEDE8D00DF6F8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

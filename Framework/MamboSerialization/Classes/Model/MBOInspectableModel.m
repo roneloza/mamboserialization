@@ -30,8 +30,14 @@
 
 + (instancetype)newWithData:(NSDictionary *)data; {
     
-    id model = [MBOJSONSerializationParse parseDictionary:data
-                                            toObjectClass:[self class]];
+    return [self newWithData:data error:nil];
+}
+
++ (instancetype)newWithData:(NSDictionary *)data error:(NSError **)error; {
+    
+    id model = [MBOJSONSerializationParse parseDictionary:data toObjectClass:[self class] error:error];
+    
+//    id model = [[[MBOJSONSerializationParse alloc] initWithFoundation:data error:error] parseRootObjectToObjectClass:[self class] error:error];
     
     return model;
 }
@@ -110,8 +116,12 @@
                 
                 void (*objc_msgSendTypedSetter)(id _self, SEL _cmd, id object) = (void*)objc_msgSend;
                 
-                id value = [decoder decodeObjectOfClass:[self class] forKey:propertyName];
-                //id value = [decoder decodeObjectForKey:propertyName];
+                Class propertyClass =  [self getPropertyClassWrapClass:propertyName];
+                
+                id value = [decoder decodeObjectOfClass:propertyClass forKey:propertyName];
+                
+//                id value = [decoder decodeObjectOfClass:[self class] forKey:propertyName];
+//                id value = [decoder decodeObjectForKey:propertyName];
                 
                 if (![value isKindOfClass:[NSNull class]]) {
                     

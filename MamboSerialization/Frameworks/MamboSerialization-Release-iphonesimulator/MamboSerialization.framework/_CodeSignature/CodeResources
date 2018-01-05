@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/MBOInspectableModel.h</key>
 		<data>
-		aFUIz6CJ+MisTdfIhM4AYYKcu0E=
+		eYWmvyMWCYd9GelH9815z4VToP4=
 		</data>
 		<key>Headers/MBOInspectableObject.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/MBOJSONSerializationParse.h</key>
 		<data>
-		smMx2SxxIGeN+F/C9HgE2EKiABg=
+		hHROZaETPUi9mWnGaFqr5OYCSO0=
 		</data>
 		<key>Headers/MamboSerialization.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		SfVmL+BhE33F1EluHarjD+dh1xo=
+		LEe6pF8HulQvlatpCcEbORx2UeA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -35,11 +35,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aFUIz6CJ+MisTdfIhM4AYYKcu0E=
+			eYWmvyMWCYd9GelH9815z4VToP4=
 			</data>
 			<key>hash2</key>
 			<data>
-			7z1c0lAo5n4QHDiNQ1Ezp9RGuDGWorhp0N5eYDlA7oo=
+			9ji2Nlk0cWvCjnaVRVoaGjz1lFdHmskfM3DedOACYSY=
 			</data>
 		</dict>
 		<key>Headers/MBOInspectableObject.h</key>
@@ -57,11 +57,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			smMx2SxxIGeN+F/C9HgE2EKiABg=
+			hHROZaETPUi9mWnGaFqr5OYCSO0=
 			</data>
 			<key>hash2</key>
 			<data>
-			PKESm7x2txbbH3FndEPyxhu7mrczdxLnh5MCK7F3p0A=
+			1vW6G81g5mMYJXa0RTHfk/MZDYkFdLRwuCiBku/zs7w=
 			</data>
 		</dict>
 		<key>Headers/MamboSerialization.h</key>

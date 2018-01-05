@@ -12,6 +12,7 @@
 @interface MBOInspectableModel : NSObject<MBOInspectableObject, NSCopying, NSSecureCoding>
 
 + (instancetype)newWithData:(NSDictionary *)data;
++ (instancetype)newWithData:(NSDictionary *)data error:(NSError **)error;
 + (NSString *)classNameString;
 + (instancetype)initWithArchivedVersion:(NSData *)archivedVersion;
 - (NSData *)getArchivedVersion;

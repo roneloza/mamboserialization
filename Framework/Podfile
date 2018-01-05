@@ -10,5 +10,13 @@ target 'MamboSerialization' do
   # use_frameworks!
 
   # Pods for MamboSerialization
+  
+  target 'MamboSerializationTests' do
+      inherit! :search_paths
+      pod 'Specta'
+      pod 'Expecta'
+      pod 'OCMock'
+      # Pods for testing
+  end
 
 end

@@ -10,6 +10,10 @@
 #import "MBOInspectableModel.h"
 #import <objc/message.h>
 
+NSErrorDomain const MBOMamboSerializationErrorDomain = @"com.mambo.MamboSerializationErrorDomain";
+NSInteger const MBOMamboSerializationErrorCodeClassNoConformProtocol = 30001;
+NSInteger const MBOMamboSerializationErrorCodePropertyNoSupplyJsonKey = 30002;
+
 @interface MBOJSONSerializationParse()
 
 @property (nonatomic, strong, readwrite) id root;
@@ -20,12 +24,14 @@
 
 - (instancetype)initWithData:(NSData *)data; {
     
+    return [self initWithData:data error:nil];
+}
+
+- (instancetype)initWithData:(NSData *)data error:(NSError *__autoreleasing *)error {
+    
     if ((self = [super init])) {
         
-        
-        NSError *error = nil;
-        
-        _root = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingAllowFragments) error:&error];
+        _root = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingAllowFragments) error:error];
     }
     
     return self;
@@ -33,27 +39,22 @@
 
 - (instancetype)initWithFoundation:(id)foundation {
     
+    return [self initWithFoundation:foundation error:nil];
+}
+
+- (instancetype)initWithFoundation:(id)foundation error:(NSError *__autoreleasing *)error {
+    
     if ((self = [super init])) {
         
         if ([NSJSONSerialization isValidJSONObject:foundation]) {
             
-            NSError *error = nil;
+            NSData *data = [NSJSONSerialization dataWithJSONObject:foundation options:NSJSONWritingPrettyPrinted error:error];
             
-            NSData *data = [NSJSONSerialization dataWithJSONObject:foundation
-                                                           options:NSJSONWritingPrettyPrinted
-                                                             error:&error];
-            [self setData:data];
+            _root = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingAllowFragments) error:error];
         }
     }
     
     return self;
-}
-
-- (void)setData:(NSData *)data {
-    
-    NSError *error = nil;
-    
-    self.root = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingAllowFragments) error:&error];
 }
 
 - (NSDictionary *)getRootDictionary; {
@@ -127,7 +128,86 @@
     return ([value isKindOfClass:[NSArray class]] ? (NSArray *)value : nil);
 }
 
+#pragma mark - Parser
+
 + (NSArray *)parseArray:(NSArray *)array toObjectClass:(Class)objectClass; {
+
+    return [self parseArray:array toObjectClass:objectClass error:nil];
+}
+
++ (id)parseDictionary:(NSDictionary *)dictionary toObjectClass:(Class)objectClass; {
+
+    return [self parseDictionary:dictionary toObjectClass:objectClass error:nil];
+}
+
+- (id)parseRootObjectToObjectClass:(Class)objectClass error:(NSError *__autoreleasing *)error {
+    
+    id object = nil;
+    
+    id rootDictObject = [self getRootDictionary];
+    id rootArrayObject = [self getRootArray];
+    
+    if (rootDictObject) {
+        
+        object = [[self class] parseDictionary:rootDictObject toObjectClass:objectClass error:error];
+    }
+    else if (rootArrayObject) {
+        
+        object = [[self class] parseArray:rootArrayObject toObjectClass:objectClass error:error];
+    }
+    
+    return object;
+}
+
+- (id)parseRootObjectToObjectClass:(Class)objectClass; {
+    
+    return [self parseRootObjectToObjectClass:objectClass error:nil];
+}
+
+- (NSArray *)parseRootObjectToArrayObjectClass:(Class)objectClass; {
+    
+    return [self parseRootObjectToArrayObjectClass:objectClass error:nil];
+}
+
+- (NSArray *)parseRootObjectToArrayObjectClass:(Class)objectClass error:(NSError *__autoreleasing *)error; {
+    
+    id object = [self parseRootObjectToObjectClass:objectClass error:error];
+    
+    return [object isKindOfClass:[NSArray class]] ? object : nil;
+}
+
+- (id)parseByKeyPath:(NSString *)keyPath toObjectClass:(Class)objectClass; {
+    
+    return [self parseByKeyPath:keyPath toObjectClass:objectClass error:nil];
+}
+
+- (NSArray *)parseToArrayByKeyPath:(NSString *)keyPath toObjectClass:(Class)objectClass error:(NSError *__autoreleasing *)error; {
+    
+    id object = [self parseByKeyPath:keyPath toObjectClass:objectClass error:error];
+    
+    return [object isKindOfClass:[NSArray class]] ? object : nil;
+}
+
+- (NSArray *)parseToArrayByKeyPath:(NSString *)keyPath toObjectClass:(Class)objectClass; {
+    
+    return [self parseToArrayByKeyPath:keyPath toObjectClass:objectClass error:nil];
+}
+
+- (id)parseToObjectByKeyPath:(NSString *)keyPath toObjectClass:(Class)objectClass error:(NSError *__autoreleasing *)error; {
+  
+    id object = [self parseByKeyPath:keyPath toObjectClass:objectClass error:error];
+    
+    return [object isKindOfClass:objectClass] ? object : nil;
+}
+
+- (id)parseToObjectByKeyPath:(NSString *)keyPath toObjectClass:(Class)objectClass; {
+    
+    return [self parseToObjectByKeyPath:keyPath toObjectClass:objectClass error:nil];
+}
+
+#pragma mark - Parser Handling Error
+
++ (NSArray *)parseArray:(NSArray *)array toObjectClass:(Class)objectClass error:(NSError *__autoreleasing *)error; {
     
     NSMutableArray *objects = nil;
     
@@ -141,7 +221,7 @@
             
             if ([dictionary isKindOfClass:[NSDictionary class]]) {
                 
-                MBOInspectableModel *objectModel = [self parseDictionary:dictionary toObjectClass:objectClass];
+                MBOInspectableModel *objectModel = [self parseDictionary:dictionary toObjectClass:objectClass error:error];
                 
                 object = objectModel;
             }
@@ -157,9 +237,11 @@
     return [objects copy];
 }
 
-+ (id)parseDictionary:(NSDictionary *)dictionary toObjectClass:(Class)objectClass; {
-    
++ (id)parseDictionary:(NSDictionary *)dictionary toObjectClass:(Class)objectClass error:(NSError *__autoreleasing *)error; {
+ 
     id object = nil;
+    
+    NSMutableArray *noSupplyJsonKeys = [[NSMutableArray alloc] initWithCapacity:0];
     
     if (dictionary) {
         
@@ -180,28 +262,47 @@
                     
                     id value = [dictionary valueForKey:key];
                     
-                    if ((propertyClass == [NSArray class])&&
-                        [value isKindOfClass:[NSArray class]]) {
+                    if (propertyClass == [NSArray class] && [value isKindOfClass:[NSArray class]]) {
                         
-                        value = [self parseArray:value toObjectClass:parseElementClass];
+                        value = [self parseArray:value toObjectClass:parseElementClass error:error];
                     }
                     else if ([value isKindOfClass:[NSDictionary class]]) {
                         
-                        value = [self parseDictionary:value toObjectClass:propertyClass];
+                        value = [self parseDictionary:value toObjectClass:propertyClass error:error];
                     }
                     
-                    if (value &&
-                        [value isKindOfClass:propertyClass] &&
-                        ![value isKindOfClass:[NSNull class]]) {
+                    if (value && [value isKindOfClass:propertyClass] && ![value isKindOfClass:[NSNull class]]) {
                         
                         void (*objc_msgSendTyped)(id selfObject, SEL _cmd, id object) = (void*)objc_msgSend;
                         
                         objc_msgSendTyped(object, propertySetter, value);
                     }
                 }
+                else {
+                    
+                    [noSupplyJsonKeys addObject:[[NSString alloc] initWithFormat:@"property %@ no supply setter tied with json key.", propertyName]];
+                }
+            }
+            
+            if (error != NULL && noSupplyJsonKeys.count > 0) {
+                
+                // Create and return the custom domain error.
+                NSDictionary *errorDictionary = @{NSLocalizedDescriptionKey : [noSupplyJsonKeys componentsJoinedByString:@"\n"]};
+                
+                *error = [[NSError alloc] initWithDomain:MBOMamboSerializationErrorDomain code:MBOMamboSerializationErrorCodePropertyNoSupplyJsonKey userInfo:errorDictionary];
             }
         }
         else {
+            
+            if (error != NULL) {
+                
+                NSString *description = NSLocalizedString(@"object no conforms protocol MBOInspectableObject.", @"");
+                
+                // Create and return the custom domain error.
+                NSDictionary *errorDictionary = @{NSLocalizedDescriptionKey : description};
+                
+                *error = [[NSError alloc] initWithDomain:MBOMamboSerializationErrorDomain code:MBOMamboSerializationErrorCodeClassNoConformProtocol userInfo:errorDictionary];
+            }
             
             object = dictionary;
         }
@@ -210,81 +311,25 @@
     return object;
 }
 
-- (id)parseRootObjectToObjectClass:(Class)objectClass; {
-    
-    id object = nil;
-    
-    id rootDictObject = [self getRootDictionary];
-    id rootArrayObject = [self getRootArray];
-    
-    if (rootDictObject) {
-        
-        object = [[self class] parseDictionary:rootDictObject toObjectClass:objectClass];
-    }
-    else if (rootArrayObject) {
-        
-        object = [[self class] parseArray:rootArrayObject toObjectClass:objectClass];
-    }
-    
-    return object;
-}
-
-- (NSArray *)parseRootObjectToArrayObjectClass:(Class)objectClass; {
-    
-    id object = [self parseRootObjectToObjectClass:objectClass];
-    
-    return [object isKindOfClass:[NSArray class]] ? object : nil;
-}
-
-- (id)parseByKeyPath:(NSString *)keyPath toObjectClass:(Class)objectClass; {
-    
+- (id)parseByKeyPath:(NSString *)keyPath toObjectClass:(Class)objectClass error:(NSError *__autoreleasing *)error; {
+ 
     id value = [self getValueForKeyPath:keyPath];
     
     id object = nil;
     
     if ([value isKindOfClass:[NSDictionary class]]) {
         
-        object = [[self class] parseDictionary:value toObjectClass:objectClass];
+        object = [[self class] parseDictionary:value toObjectClass:objectClass error:error];
     }
     else if ([value isKindOfClass:[NSArray class]]) {
         
-        object = [[self class] parseArray:value toObjectClass:objectClass];
+        object = [[self class] parseArray:value toObjectClass:objectClass error:error];
     }
     
     return object;
 }
 
-- (NSArray *)parseToArrayByKeyPath:(NSString *)keyPath toObjectClass:(Class)objectClass; {
-    
-    id object = [self parseByKeyPath:keyPath toObjectClass:objectClass];
-    
-    return [object isKindOfClass:[NSArray class]] ? object : nil;
-}
-
-- (id)parseToObjectByKeyPath:(NSString *)keyPath toObjectClass:(Class)objectClass; {
-    
-    id object = [self parseByKeyPath:keyPath toObjectClass:objectClass];
-    
-    return [object isKindOfClass:objectClass] ? object : nil;
-}
-
-
-- (NSString *)jsonStringWithPrettyPrint:(BOOL)prettyPrint {
-    
-    NSError *error;
-    
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self.root options:(NSJSONWritingOptions)(prettyPrint ? NSJSONWritingPrettyPrinted : 0) error:&error];
-    
-    if (!jsonData) {
-        
-        return @"{}";
-    }
-    else {
-        
-        return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    }
-}
-
+#pragma mark - KVC
 
 + (NSArray *)getAllUniqueKeysToSerializeObject:(id)serializeObject; {
     
@@ -362,5 +407,24 @@
     
     return allUniqueKeys;
 }
+
+#pragma mark - Private
+
+- (NSString *)jsonStringWithPrettyPrint:(BOOL)prettyPrint {
+    
+    NSError *error;
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self.root options:(NSJSONWritingOptions)(prettyPrint ? NSJSONWritingPrettyPrinted : 0) error:&error];
+    
+    if (!jsonData) {
+        
+        return @"{}";
+    }
+    else {
+        
+        return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
+}
+
 
 @end

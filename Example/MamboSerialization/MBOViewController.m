@@ -78,7 +78,9 @@
                     
                     MBOJSONSerializationParse *parser = [[MBOJSONSerializationParse alloc] initWithData:data];
                     
-                    NSArray<MBOGooglePlaceAutoCompletePrediction *> *predictions = [parser parseToArrayByKeyPath:@"predictions" toObjectClass:[MBOGooglePlaceAutoCompletePrediction class]];
+                    NSError *error = nil;
+                    
+                    NSArray<MBOGooglePlaceAutoCompletePrediction *> *predictions = [parser parseToArrayByKeyPath:@"predictions" toObjectClass:[MBOGooglePlaceAutoCompletePrediction class] error:&error];
                     
                     //NSString *status = [responseDict objectForKey:@"status"];
                     
