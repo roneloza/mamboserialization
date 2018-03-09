@@ -133,26 +133,40 @@
     return self;
 }
 
+- (NSSet *)propertyForClass:(Class)class {
+    
+    unsigned int outCount, i;
+    
+    objc_property_t *properties = class_copyPropertyList(class, &outCount);
+    NSMutableSet *propertiesArray = [[NSMutableSet alloc] initWithCapacity:outCount];
+    
+    for (i = 0; i < outCount; i++) {
+        
+        objc_property_t property = properties[i];
+        NSString *propertyName = [NSString stringWithCString:property_getName(property) encoding:NSUTF8StringEncoding];
+        
+        if (propertyName) [propertiesArray addObject:propertyName];
+    }
+    
+    free(properties);
+    
+    return [propertiesArray copy];
+}
+
 - (NSSet *)propertyNames; {
     
     if (!_propertyNames) {
         
-        unsigned int outCount, i;
+        NSMutableSet* result = [NSMutableSet new];
+        Class observed = [self class];
         
-        objc_property_t *properties = class_copyPropertyList([self class], &outCount);
-        NSMutableArray *propertiesArray = [[NSMutableArray alloc] initWithCapacity:outCount];
-        
-        for (i = 0; i < outCount; i++) {
+        while ([observed isSubclassOfClass:[MBOInspectableModel class]] && observed != [MBOInspectableModel class]) {
             
-            objc_property_t property = properties[i];
-            NSString *propertyName = [NSString stringWithCString:property_getName(property) encoding:NSUTF8StringEncoding];
-            
-            if (propertyName) [propertiesArray addObject:propertyName];
+            [result unionSet:[self propertyForClass:observed]];
+            observed = [observed superclass];
         }
         
-        free(properties);
-        
-        _propertyNames = [propertiesArray copy];
+        _propertyNames = [result copy];;
     }
     
     return _propertyNames;
