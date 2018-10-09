@@ -8,7 +8,7 @@
 
 #import "MBOInspectableModel.h"
 #import "MBOJSONSerializationParse.h"
-#import <objC/message.h>
+#import <objc/message.h>
 
 @implementation MBOInspectableModel
 
