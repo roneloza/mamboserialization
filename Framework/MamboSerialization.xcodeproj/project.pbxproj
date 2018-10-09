@@ -239,7 +239,6 @@
 				0C144E3C1F44E32D009B03A5 /* Frameworks */,
 				0C144E3D1F44E32D009B03A5 /* Headers */,
 				0C144E3E1F44E32D009B03A5 /* Resources */,
-				5FAEDA9A535223CE65CF0A88 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,7 +258,6 @@
 				0CF9D7D91FFEDE8D00DF6F8E /* Frameworks */,
 				0CF9D7DA1FFEDE8D00DF6F8E /* Resources */,
 				176808CDD6C0A952444BFF93 /* [CP] Embed Pods Frameworks */,
-				128563F18C8580ECC747F143 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -351,21 +349,6 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n######################\n# Avoid recursively calling this script.\n######################\nset +u\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\n######################\n# Options\n######################\n\nREVEAL_ARCHIVE_IN_FINDER=false\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} OTHER_CFLAGS=\"-fembed-bitcode\" clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} OTHER_CFLAGS=\"-fembed-bitcode\" clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      if [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\n                                                                      cp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      ######################\n                                                                      # On Release, copy the result to release directory\n                                                                      ######################\n                                                                      #echo \"start output\"\n                                                                      #echo \"output universal\"\n                                                                      #BASE_DIR_OUTPUT=\"${PROJECT_DIR}/Frameworks\"\n                                                                      BASE_DIR_OUTPUT=\"${PROJECT_DIR}/../${FRAMEWORK_NAME}/Frameworks\"\n                                                                      rm -rf \"${BASE_DIR_OUTPUT}\"\n                                                                      \n                                                                      OUTPUT_DIR_UNIVERSAL=\"${BASE_DIR_OUTPUT}/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n                                                                      \n                                                                      rm -rf \"${OUTPUT_DIR_UNIVERSAL}\"\n                                                                      mkdir -p \"${OUTPUT_DIR_UNIVERSAL}\"\n                                                                      \n                                                                      cp -r \"${FRAMEWORK}\" \"${OUTPUT_DIR_UNIVERSAL}\"\n                                                                      #mv \"${OUTPUT_DIR_UNIVERSAL}${FRAMEWORK_NAME}.framework\" \"${OUTPUT_DIR_UNIVERSAL}${FRAMEWORK_NAME}.framework\"\n                                                                      \n                                                                      #echo \"output simulator\"\n                                                                      OUTPUT_DIR_SIMULATOR=\"${BASE_DIR_OUTPUT}/${FRAMEWORK_NAME}-${CONFIGURATION}-iphonesimulator/\"\n                                                                      \n                                                                      rm -rf \"$OUTPUT_DIR_SIMULATOR\"\n                                                                      mkdir -p \"$OUTPUT_DIR_SIMULATOR\"\n                                                                      \n                                                                      cp -r \"${SIMULATOR_LIBRARY_PATH}\" \"${OUTPUT_DIR_SIMULATOR}\"\n                                                                      \n                                                                      #echo \"output iphoneos\"\n                                                                      OUTPUT_DIR_IPHONEOS=\"$BASE_DIR_OUTPUT/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneos/\"\n                                                                      \n                                                                      rm -rf \"${OUTPUT_DIR_IPHONEOS}\"\n                                                                      mkdir -p \"${OUTPUT_DIR_IPHONEOS}\"\n                                                                      \n                                                                      cp -r \"${DEVICE_LIBRARY_PATH}\" \"${OUTPUT_DIR_IPHONEOS}\"\n                                                                      \n                                                                      #echo \"finder\"\n                                                                      if [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\n                                                                      open \"${BASE_DIR_OUTPUT}\"\n                                                                      fi";
 		};
-		128563F18C8580ECC747F143 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MamboSerializationTests/Pods-MamboSerializationTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		176808CDD6C0A952444BFF93 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -404,21 +387,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5FAEDA9A535223CE65CF0A88 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MamboSerialization/Pods-MamboSerialization-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		69829302236738B206A90B97 /* [CP] Check Pods Manifest.lock */ = {

@@ -1,6 +1,6 @@
 {
   "name": "MamboSerialization",
-  "version": "0.1.1",
+  "version": "0.1.7",
   "summary": "MamboSerialization bring serialization, and base model class for your app.",
   "description": "The MamboSerialization framework provides a base layer of functionality for serialization, and model classes are runtime inspectable for properties. The classes, protocols defined by MamboSerialization can be used throughout the iOS SDKs.",
   "homepage": "http://mambo.pe",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://bitbucket.org/compec/MamboSerialization.git",
-    "tag": "0.1.1"
+    "tag": "0.1.7"
   },
   "platforms": {
     "ios": "8.0"
